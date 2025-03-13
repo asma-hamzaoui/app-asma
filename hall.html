@@ -15,49 +15,44 @@
             color: white;
             flex-direction: column;
         }
-        .remote {
+        .card {
             background: #333;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
             text-align: center;
+            max-width: 300px;
+        }
+        .card h2 {
             margin-bottom: 20px;
+            font-size: 1.5em;
         }
         button {
             display: block;
-            width: 100px;
-            margin: 10px auto;
-            padding: 10px;
+            width: 100%;
+            margin: 10px 0;
+            padding: 12px;
             background: #007BFF;
             color: white;
             border: none;
-            border-radius: 5px;
+            border-radius: 8px;
             cursor: pointer;
+            font-size: 1em;
             transition: background 0.3s;
         }
         button:hover {
             background: #0056b3;
         }
-        .carte-container img {
-            max-width: 100%;
-            height: auto;
-            border: 2px solid #ccc;
-            border-radius: 10px;
-            cursor: pointer;
-        }
     </style>
 </head>
 <body>
-    <div class="carte-container">
-        <img src="https://res.cloudinary.com/ddaouadrk/image/upload/v1741831817/t%C3%A9l%C3%A9chargement_idfvz1.jpg" alt="Télécommande" width="200" onclick="navigateTo('https://www.artsteps.com/view/room1')">
-    </div>
-
-    <div class="remote">
+    <div class="card">
         <h2>Télécommande</h2>
-        <button onclick="navigateTo('https://www.facebook.com/?locale=fr_FR')">Chambre 1</button>
+        <button onclick="navigateTo('https://www.artsteps.com/view/room1')">Chambre 1</button>
         <button onclick="navigateTo('https://www.artsteps.com/view/room2')">Chambre 2</button>
         <button onclick="navigateTo('https://www.artsteps.com/view/room3')">Chambre 3</button>
         <button onclick="navigateTo('https://www.artsteps.com/view/room4')">Chambre 4</button>
+        <button onclick="navigateTo('https://www.artsteps.com/view/room5')">Chambre 5</button>
     </div>
 
     <script>
