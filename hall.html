@@ -11,26 +11,27 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
-            background-color: #f0e68c;
+            background: radial-gradient(circle, #fef2a0, #f0e68c);
         }
         .remote-container {
             position: relative;
-            width: 300px;
-            height: 300px;
-            background-color: #add8e6;
+            width: 320px;
+            height: 320px;
+            background: radial-gradient(circle, #a3d5f0, #add8e6);
             border-radius: 50%;
             display: flex;
             justify-content: center;
             align-items: center;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 6px 14px rgba(0, 0, 0, 0.4);
+            border: 5px solid #ffffff;
         }
         .button-container {
             position: absolute;
-            width: 80px;
-            height: 40px;
-            background: linear-gradient(to bottom, #fdf5e6, #d2b48c);
-            border-radius: 5px;
-            border: 1px solid #8b5a2b;
+            width: 85px;
+            height: 45px;
+            background: linear-gradient(to bottom, #ffedcc, #d2a679);
+            border-radius: 8px;
+            border: 2px solid #8b5a2b;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -38,21 +39,26 @@
             font-weight: bold;
             text-align: center;
             color: black;
+            box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease;
         }
         .button-container:hover {
-            background: #c7a17a;
+            background: #c78c5c;
+            transform: scale(1.1);
         }
-        .room-1 { top: 10%; left: 20%; transform: rotate(-25deg); }
-        .room-2 { top: 10%; right: 20%; transform: rotate(25deg); }
-        .room-3 { bottom: 10%; right: 20%; transform: rotate(-25deg); }
-        .room-4 { bottom: 10%; left: 20%; transform: rotate(25deg); }
+        .room-1 { top: 12%; left: 18%; transform: rotate(-25deg); }
+        .room-2 { top: 12%; right: 18%; transform: rotate(25deg); }
+        .room-3 { bottom: 12%; right: 18%; transform: rotate(-25deg); }
+        .room-4 { bottom: 12%; left: 18%; transform: rotate(25deg); }
         .room-5 {
-            width: 60px;
-            height: 30px;
-            background: linear-gradient(to bottom, #ffffff, #a9a9a9);
-            border-radius: 5px;
+            width: 70px;
+            height: 40px;
+            background: linear-gradient(to bottom, #ffffff, #b0b0b0);
+            border-radius: 8px;
+            border: 2px solid #696969;
             top: 50%; left: 50%;
             transform: translate(-50%, -50%);
+            box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.3);
         }
     </style>
 </head>
