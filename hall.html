@@ -39,18 +39,14 @@
     </style>
 </head>
 <body>
-    <div class="carte-container">
-        <img src="https://res.cloudinary.com/ddaouadrk/image/upload/v1741831817/t%C3%A9l%C3%A9chargement_idfvz1.jpg" alt="Télécommande" width="200">
-
-        <map name="carte-cliquable">
-            <area shape="rect" coords="50,50,150,150" href="#" alt="Chambre 1" title="Chambre 1">
-            <area shape="rect" coords="200,50,300,150" href="#" alt="Chambre 2" title="Chambre 2">
-            <area shape="rect" coords="200,200,300,300" href="#" alt="Chambre 3" title="Chambre 3">
-            <area shape="rect" coords="50,200,150,300" href="#" alt="Chambre 4" title="Chambre 4">
-            <area shape="rect" coords="125,125,225,225" href="#" alt="Chambre 5" title="Chambre 5">
-        </map>
+    <div class="remote">
+        <h2>Télécommande</h2>
+        <img src="remote-control.png" alt="Télécommande" width="200">
+        <button onclick="navigateTo('https://www.facebook.com/?locale=fr_FR')">Chambre 1</button>
+        <button onclick="navigateTo('https://www.artsteps.com/view/room2')">Chambre 2</button>
+        <button onclick="navigateTo('https://www.artsteps.com/view/room3')">Chambre 3</button>
+        <button onclick="navigateTo('https://www.artsteps.com/view/room4')">Chambre 4</button>
     </div>
-
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             const zones = document.querySelectorAll('area');
