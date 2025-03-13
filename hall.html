@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carte cliquable</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+
+        .carte-container {
+            position: relative;
+            text-align: center;
+        }
+
+        .carte-container img {
+            max-width: 100%;
+            height: auto;
+            border: 2px solid #ccc;
+            border-radius: 10px;
+        }
+
+        area {
+            cursor: pointer;
+            transition: opacity 0.3s ease;
+        }
+
+        area:hover {
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+    <div class="carte-container">
+        <img src="Carte.PNG" alt="Carte interactive" usemap="#carte-cliquable">
+
+        <map name="carte-cliquable">
+            <area shape="rect" coords="50,50,150,150" href="#" alt="Chambre 1" title="Chambre 1">
+            <area shape="rect" coords="200,50,300,150" href="#" alt="Chambre 2" title="Chambre 2">
+            <area shape="rect" coords="200,200,300,300" href="#" alt="Chambre 3" title="Chambre 3">
+            <area shape="rect" coords="50,200,150,300" href="#" alt="Chambre 4" title="Chambre 4">
+            <area shape="rect" coords="125,125,225,225" href="#" alt="Chambre 5" title="Chambre 5">
+        </map>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const zones = document.querySelectorAll('area');
+
+            zones.forEach(zone => {
+                zone.addEventListener('mouseover', () => {
+                    zone.style.opacity = '0.7';
+                });
+
+                zone.addEventListener('mouseout', () => {
+                    zone.style.opacity = '1';
+                });
+
+                zone.addEventListener('click', (e) => {
+                    e.preventDefault();
+
+                    const titre = zone.getAttribute('title');
+
+                    switch (titre) {
+                        case 'Chambre 1':
+                            alert("Vous pouvez naviguer à la Chambre 1.");
+                            window.location.href = "chambre1.html";
+                            break;
+                        case 'Chambre 2':
+                            alert("Vous pouvez naviguer à la Chambre 2.");
+                            window.location.href = "chambre2.html";
+                            break;
+                        case 'Chambre 3':
+                            alert("Vous pouvez naviguer à la Chambre 3.");
+                            window.location.href = "chambre3.html";
+                            break;
+                        case 'Chambre 4':
+                            alert("Vous pouvez naviguer à la Chambre 4.");
+                            window.location.href = "chambre4.html";
+                            break;
+                        case 'Chambre 5':
+                            alert("Vous pouvez naviguer à la Chambre 5.");
+                            window.location.href = "chambre5.html";
+                            break;
+                        default:
+                            alert("Action non définie pour cette zone.");
+                            break;
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
